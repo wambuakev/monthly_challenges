@@ -4,10 +4,13 @@ from django.http import HttpResponse, HttpResponseNotFound
 
 # Create your views here.
 
+def monthly_challenge_by_number(request, month):
+    return HttpResponse(month)
+
 def monthly_challenge(request, month):
     challenge_text = None
     if month == 'january':
-        challenge_text = "Eat no meat for the entire month!"
+        challenge_text = "Wewe ni mshenzi...Na uko single"
     if month == 'february':
         challenge_text = "Walk at least 20 minutes everyday!"
     elif month == "march":
